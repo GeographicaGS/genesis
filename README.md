@@ -4,6 +4,12 @@
 Genesis is a base project for Backbone Applicactions based on Gulp and Browserify. 
 
 
+Build
+```
+docker-compose build
+```
+
+
 ## DEV environment
 
 1. Start Web container
