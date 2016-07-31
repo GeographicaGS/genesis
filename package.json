@@ -1,0 +1,27 @@
+{
+  "name": "brow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp build",
+    "builder-watcher": "gulp watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "javier.aragon@geographica.gs",
+  "license": "ISC",
+  "dependencies": {
+    "backbone": "^1.3.3",
+    "browserify": "^13.1.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-less": "^3.1.0",
+    "gulp-uglify": "^1.5.4",
+    "jquery": "^3.1.0",
+    "node-underscorify": "0.0.14",
+    "underscore": "^1.8.3",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.7.0"
+  }
+}
