@@ -20,7 +20,7 @@ docker-compose build
 2. Install dependencies at your folder
 
   ```
-  docker-compose run builder npm install
+  docker-compose run builder npm install --no-bin-links
   ```
 4. Generate public js and css folders (only first time).
 
