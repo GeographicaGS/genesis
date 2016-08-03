@@ -40,7 +40,7 @@ gulp.task('less', function () {
 
 
 gulp.task('watch', function() {
-  gulp.watch('./src/**/*.*', ['browserify-debug', 'less']);
+  gulp.watch('src/**/*.*', ['browserify-debug', 'less']);
   return;
 });
 
