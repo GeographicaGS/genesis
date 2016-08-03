@@ -31,6 +31,7 @@ gulp.task('less', function () {
   return gulp.src('./src/css/style.less')
   .pipe(less().on('error', function (err) {
     console.log(err);
+    this.emit("end");
   }))
 	.pipe(cleanCSS({compatibility: 'ie8'}))
   .pipe(gulp.dest('./public/css/'));
