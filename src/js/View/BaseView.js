@@ -6,10 +6,4 @@ var $ = require('jquery'),
 
 		Backbone.$ = $;
 
-module.exports = Backbone.View.extend({
-
-	onClose: function(){
-    this.stopListening();
-  }
-
-});
+module.exports = Backbone.View.extend({});
