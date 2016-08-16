@@ -21,7 +21,7 @@ var App = module.exports = {
 	  this.$main.html(view.el);
 
 	  if (oldView)
-	    oldView.close();
+	    oldView.remove();
 
 	  this.scrollTop();
 	},
