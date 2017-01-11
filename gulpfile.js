@@ -11,7 +11,7 @@ gulp.task('browserify-debug', function() {
   .bundle()
   .on('error', function(err){console.log(err);this.emit("end");})
   .pipe(source('main.js'))
-  .pipe(gulp.dest('../public/test/js/'));
+  .pipe(gulp.dest('./public/js/'));
 });
 
 gulp.task('browserify-production', function() {
@@ -22,7 +22,7 @@ gulp.task('browserify-production', function() {
     .pipe(buffer())
     // It should be removed by babily
     .pipe(uglify())
-    .pipe(gulp.dest('../public/test/js/'));
+    .pipe(gulp.dest('./public/js/'));
 });
 
 gulp.task('less', function () {
@@ -32,7 +32,7 @@ gulp.task('less', function () {
     this.emit("end");
   }))
 	.pipe(cleanCSS({compatibility: 'ie8'}))
-  .pipe(gulp.dest('../public/test/css/'));
+  .pipe(gulp.dest('./public/css/'));
 });
 
 
