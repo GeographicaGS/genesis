@@ -14,7 +14,6 @@ module.exports = class HomeView extends BaseView {
   }
 
   render() {
-    console.log('here');
     this.$el.html(template({'message':'Hello world'}));
     return this;
   }
