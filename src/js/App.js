@@ -1,37 +1,40 @@
 "use strict";
 
 var $ = require('jquery'),
-		Backbone = require('backbone'),
-		Router = require('./router');
-
+  Backbone = require('backbone');
 
 Backbone.$ = $;
 
-var App = module.exports = {
-	ini: function () {
-		this.$main = $('main');
-		this.router = new Router({'App':this});
-		Backbone.history.start({pushState: true});
-	},
+class App {
 
-	showView:function(view) {
-	  var oldView = this.currentView;
-	  this.currentView = view;
+  constructor() {
+    this.$main = $('main');
+  }
 
-	  this.$main.html(view.el);
+  ini(){
+    this.router = new Router();
+    Backbone.history.start({pushState: true,root: '/test'});
+  }
 
-	  if (oldView)
-	    oldView.remove();
+  showView(view) {
+    var oldView = this.currentView;
+    this.currentView = view;
+    this.$main.html(view.el);
 
-	  this.scrollTop();
-	},
+    if (oldView)
+      oldView.remove();
 
-	scrollTop:function(){
-  	var body = $('html, body');
-	  body.animate({scrollTop:0}, '500', 'swing', function() {});
-	}
+    this.scrollTop();
+  }
 
-};
+  scrollTop(){
+    var body = $('html, body');
+    body.animate({scrollTop:0}, '500', 'swing', function() {});
+  }
+}
 
+var app =  new App();
+module.exports = app;
 
-App.ini();
+var Router = require('./Router');
+app.ini();

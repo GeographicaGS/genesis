@@ -1,16 +1,21 @@
 "use strict";
 var BaseView = require('./BaseView'),
-		template = require('../template/home.html')
-;
+  template = require('../template/home.html');
 
-module.exports = BaseView.extend({
+module.exports = class HomeView extends BaseView {
 
-  initialize: function(options) {
-  	this.render();
-  },
-
-  render: function () {
-  	this.$el.html(template({'message':'Hola mundo'}));
-  	return this;
+  constructor(options){
+    super(options);
+    // Here some code
   }
-});
+
+  events(){
+    return {};
+  }
+
+  render() {
+    console.log('here');
+    this.$el.html(template({'message':'Hello world'}));
+    return this;
+  }
+}
